@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0
+}
+
+.h1{
+    text-align: left ;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    width: 100vw ;
+    height: 50px;
+    background: rgb(147, 146, 216);
+}
+
+.superior{
+    width: 100vw;
+    height: 50px;
+    background: black;
+    color: aliceblue;
+
+}
+
+.lateral{
+    width: 200px;
+    height: 100vh;
+    background: black;
+    color: aliceblue;
+}
+
