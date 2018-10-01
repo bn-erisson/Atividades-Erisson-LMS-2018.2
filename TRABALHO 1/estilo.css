@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+/* coloco margin e padding 0 e defino a fonteb como arial */
+
+.cabecalho{
+    background-color: #2E1828;
+    padding: 10px;
+    font-size: 50px;
+    color: aliceblue;
+}
+/* defino a cor do cabeçalho do titulo, padding de 10px, almento o tamnho da fonte e coloco ela como branca  */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* "Ativo" o flexbox, desloco o conteudo exedente da pagina para baixo, defino o espaço entre o blocos como iguais */
+
+.dropdown-content{
+    position: absolute;
+    overflow: hidden;
+    transition: 0.5s;
+    max-height: 0;
+    background-color: #582C4F;
+    color: aliceblue;
+}
+/* defino a posição como "dependente" do elemento pai, coloco o everflow como escondido, coloco o tempo da transição, defino o tamanho maximo 
+como 0, assimo conteudo fica escondido edepois defino as cores  */
+
+.menu-dropdown{
+    background-color: #582C4F;
+    box-shadow: 2px 2px 4px  black;
+    height: 50px;
+    box-sizing: border-box;
+    width: 100vw;
+}
+/* defino a cor da div e da sombra, a altura da barra de navegação, coloco o boxsizing para que a barra não mude de tamanho e defino a lagura
+ da borda */
+
+.menu-dropdown>ul{
+    text-align: center;
+    line-height: 50px;
+    float: left;
+}
+/* Alinho o texto, defino o tamanho da linha de texto como sendo igual a ou tamanho da barra, coloco prea ficar posicionado a esquerda*/
+
+.menu-dropdown>ul>li{
+    display: inline-block;
+}
+/* coloco para que eles de conportem como blocos e ao mesmo tempo, como elementos inline */
+
+.menu-dropdown>ul>li>a{
+    color: aliceblue;
+    margin: 45px;
+}
+/* defino a cor e a margem entre os texto da pagina */
+
+.ativador:hover .dropdown-content {
+    max-height: 999px;
+}
+/* defino pra que quando o botão estiver ativado o conteudo do dropdown deve ter largura maxima de 999px */
+
+.dropdown-content>ul>li{
+    list-style-type: none
+}
+/* tiro os pontinhos da lista */
+
+.ativador:hover{
+    background-color: #8D547A
+}
+/* defino a cor do botão quando ele estiver ativado */
+
+.dropdown-content>ul>li>a{
+    margin: 50px;
+}
+/* defino a margem entre os textos do conteudo do dropdown */
+
+.dropdown-content>ul>li:hover{
+    background-color: #8D547A   
+}
+/* defino pra que quando um item do dropdown estiver ativo ele mude de cor */
+
+.navegador-direito {
+    background-color: #582C4F;
+    box-shadow: 2px 2px 4px  black;
+    width: 185px;
+    height: 100vh;
+}
+/* defino a cor, sombra, largura e altura barra ESQUERDA */
+
+.navegador-direito>li{
+    list-style-type: none;
+}
+/* tiro as bolinhas da lista */
+
+.navegador-direito>ul>li>a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    color: aliceblue
+}
+/* digo que é pra rendenizar em forma de bloco, tiro adecoração dos links, alinho os textos ao centro, coloco padding de 10 e defino
+ a cordo texto */
+
+
+.navegador-direito>ul>li>a:hover{
+    background-color: #8D547A
+}
+/* defino pra que quando um item da barra estiver ativo ele mude de cor */
+
+.navegador-esquerdo{
+    width: 185px;
+    background: linear-gradient(#8D547A,#582C4F);
+    box-shadow: -2px 2px 4px  black;
+}
+/* defino o tamanho a cor e a sombra do navegador DIREITO */
+
+.navegador-esquerdo .titulo{
+    margin: 10px;
+    text-align: center;
+    color: aliceblue;
+}
+/* coloco a margem a cor e alinho o texto do titulo */
+
+.navegador-esquerdo>div{
+    text-align: center;
+    color: aliceblue
+}
+/* coloco a cor e alinho o resto do texto */
+
+.bobissauro>img{
+    height: 100px;
+    width: 100px;
+}
+/* defino o tamanho da imagem do bobissauro */
+
+.meio{
+    flex-basis: fill;
+    flex-grow: 1;
+}
+/* defino o padrão de crescimento do espaço em branco do site, coloco para que o meio preencha todo o espaço restante*/
+
+@keyframes mover-e-girar{
+    0%{
+        transform: translate(0,0) rotate(0deg)
+    }
+    17%{
+        transform: translate(125px, 250px) rotate(0deg)
+    }
+    34%{
+        transform: translate(200px, 125px) rotate(0deg)
+    }
+    51%{
+        transform: translate(250px, 375px) rotate(0deg)
+    }
+    68%{
+        transform: translate(375px, 250px) rotate(0deg)
+    }
+    85%{
+        transform: translate(500px, 500px) rotate(0deg)
+    }
+    100%{
+        transform: translate(0px, 0px) rotate(360deg)
+    }
+}
+/* defino os keyframes da animação do bobissauro */
+
+.animado{
+    animation-name: mover-e-girar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite
+}
+/* "ligo" a animação do bobissuro, defino a duração e defino pra que ela seja infinita */
+
+@media screen and (max-width: 600px){
+
+    .cabecalho{
+        text-align: center
+    }
+    /* alinho a titulo do cabeçalho */
+
+    .navegador-esquerdo{
+        width: 100%;
+    }
+    /* defino a largura do navegador DIREITO para 100% */
+
+    .navegador-direito{
+        width: 100%;
+        height: 25%;
+    }
+    /* defino a largura e a altura do navegador ESQUERDO  */
+
+    .meio{
+        height: 100vh;
+    }
+    /* defino a altura do meio */
+
+    .menu-dropdown>ul>li>a{
+        margin: 11px;
+    }
+    /* dafiuno a margem dos item do dropdown */
+}
+/* defino as novas propiedades dos itens a serem rendenizados em uma tela menor que 600px */
