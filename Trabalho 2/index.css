@@ -85,10 +85,55 @@ body{
 }
 
 .mensagens{
+    height: calc(100vh - 50px);
     flex-basis: fill;
     position: relative;
     width: calc(100% - 250px);
     display: block;
-    background-color: blue;
+    background-color: whitesmoke;
+    overflow: scroll;
 }
 
+.mensagens--mensagemuser{
+    background-color: rgb(255, 255, 255);
+    max-width: 80%;
+    height: auto;
+    border-radius: 0 15px 15px 15px;
+    margin: 10px;
+    float: left;
+    clear: both;
+    position: relative;
+}
+
+.mensagens--mensagemfriend{
+    background-color: #59d890;
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px 0 15px 15px;
+    margin: 10px;
+    float: right;
+    clear: both;
+    position: relative;
+}
+
+.mensagens--mensagemuser--conteudo{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.mensagens--mensagemuser--usuario{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    margin: 10px;
+}
+
+.mensagens--mensagemfriend--conteudo{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.mensagens--mensagemfriend--usuario{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    margin: 10px;
+}
