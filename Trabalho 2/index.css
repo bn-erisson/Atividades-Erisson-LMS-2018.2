@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo{
+    width: 900px;
+    height: 100vh;  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteudo--header{
+    flex-basis: 100%;
+    height: 50px;
+    background-color: #09d261;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.conteudo--header--titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 110px 0 20px;
+    font-size: 30px;
+}
+
+.conteudo--header>div{
+    width: 100%
+}
+
+.conteudo--header--titulo--conversa{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteudo--header>div>button{
+    float: right;
+    font-size: 10px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 8px;
+    border: 2px solid #09d261;
+    text-decoration: none;
+    background-color: none;
+    color: black;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.conteudo--listadeamigos{
+    width: 250px;
+    height: calc(100vh - 50px);
+    background-color: #eeeeee;
+    display: block;
+
+}
+
+.conteudo--listadeamigos--lista{
+    list-style-type: none;
+}
+
+.conteudo--listadeamigos--lista--itemlista{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.conteudo--listadeamigos--lista--itemlista--img{
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin: 7px;
+}
+
+.conteudo--listadeamigos--lista--itemlista--nomegrupo{
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mensagens{
+    flex-basis: fill;
+    position: relative;
+    width: calc(100% - 250px);
+    display: block;
+    background-color: blue;
+}
+
